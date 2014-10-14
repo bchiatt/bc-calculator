@@ -5,11 +5,39 @@ html
     meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width')
     title
     link(href='css/ionic.app.css', rel='stylesheet')
+    link(href='css/style.css', rel='stylesheet')
     script(src='lib/ionic/js/ionic.bundle.js')
     script(src='cordova.js')
     script(src='js/app.js')
-  body(ng-app='bc-calculator')
-    ion-pane
-      ion-header-bar.bar-stable
-        h1.title Calculator
-      ion-content
+    script(src='js/main_controller.js')
+  body(ng-app='bc-calc', ng-controller='MainCtrl')
+    .bar.bar-header.bar-energized
+      h1.title Calc
+    ion-content.has-header
+      .memory {{memory}}
+      .display {{display}}
+      .button-bar
+        a.button(ng-click='number(7)') 7
+        a.button(ng-click='number(8)') 8
+        a.button(ng-click='number(9)') 9
+        a.button +
+      .button-bar
+        a.button(ng-click='number(4)') 4
+        a.button(ng-click='number(5)') 5
+        a.button(ng-click='number(6)') 6
+        a.button -
+      .button-bar
+        a.button(ng-click='number(1)') 1
+        a.button(ng-click='number(2)') 2
+        a.button(ng-click='number(6)') 3
+        a.button *
+      .button-bar
+        a.button(ng-click='number(0)') 0
+        a.button(ng-click='number(\'.\')') .
+        a.button =
+        a.button /
+      .button-bar
+        a.button(ng-click='clear()') Clear
+    .bar.bar-footer.bar-energized
+      .title
+        small &copy; 2014, bchiatt

@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('bc-calculator', ['ionic'])
+  angular.module('bc-calc', ['ionic'])
 
   .run(function($ionicPlatform){
     $ionicPlatform.ready(function(){
