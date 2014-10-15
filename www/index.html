@@ -16,16 +16,37 @@
       <h1 class="title">Calc</h1>
     </div>
     <ion-content class="has-header">
-      <div class="memory">{{memory}}</div>
-      <div class="display">{{display}}</div>
-      <div class="button-bar"><a ng-click="number(7)" class="button">7</a><a ng-click="number(8)" class="button">8</a><a ng-click="number(9)" class="button">9</a><a class="button">+</a></div>
-      <div class="button-bar"><a ng-click="number(4)" class="button">4</a><a ng-click="number(5)" class="button">5</a><a ng-click="number(6)" class="button">6</a><a class="button">-</a></div>
-      <div class="button-bar"><a ng-click="number(1)" class="button">1</a><a ng-click="number(2)" class="button">2</a><a ng-click="number(6)" class="button">3</a><a class="button">*</a></div>
-      <div class="button-bar"><a ng-click="number(0)" class="button">0</a><a ng-click="number('.')" class="button">.</a><a class="button">=</a><a class="button">/</a></div>
-      <div class="button-bar"><a ng-click="clear()" class="button">Clear</a></div>
+      <div class="view-panel">
+        <div class="memory">{{memory}} {{sym}}</div>
+        <div class="display">{{display}}</div>
+      </div>
+      <div class="row">
+        <div class="col"><a ng-click="number(7)" class="button button-energized">7</a></div>
+        <div class="col"><a ng-click="number(8)" class="button button-energized">8</a></div>
+        <div class="col"><a ng-click="number(9)" class="button button-energized">9</a></div>
+        <div class="col"><a ng-click="symbol('+')" class="button button-calm">+</a></div>
+      </div>
+      <div class="row">
+        <div class="col"><a ng-click="number(4)" class="button button-energized">4</a></div>
+        <div class="col"><a ng-click="number(5)" class="button button-energized">5</a></div>
+        <div class="col"><a ng-click="number(6)" class="button button-energized">6</a></div>
+        <div class="col"><a ng-click="symbol('-')" class="button button-calm">-</a></div>
+      </div>
+      <div class="row">
+        <div class="col"><a ng-click="number(1)" class="button button-energized">1</a></div>
+        <div class="col"><a ng-click="number(2)" class="button button-energized">2</a></div>
+        <div class="col"><a ng-click="number(3)" class="button button-energized">3</a></div>
+        <div class="col"><a ng-click="symbol('*')" class="button button-calm">*</a></div>
+      </div>
+      <div class="row">
+        <div class="col"><a ng-click="number(0)" class="button button-energized">0</a></div>
+        <div class="col"><a ng-click="number('.')" class="button button-energized">.</a></div>
+        <div class="col"><a ng-click="symbol('=')" class="button button-positive">=</a></div>
+        <div class="col"><a ng-click="symbol('/')" class="button button-calm">/</a></div>
+      </div>
+      <div class="row"><br>
+        <div class="button-bar"><a ng-click="clear()" class="button button-light"><span ng-show="secondClear">Clear Display</span><span ng-hide="secondClear">Clear Memory</span></a></div>
+      </div>
     </ion-content>
-    <div class="bar bar-footer bar-energized">
-      <div class="title"><small>&copy; 2014, bchiatt</small></div>
-    </div>
   </body>
 </html>

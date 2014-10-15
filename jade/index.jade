@@ -14,30 +14,48 @@ html
     .bar.bar-header.bar-energized
       h1.title Calc
     ion-content.has-header
-      .memory {{memory}}
-      .display {{display}}
-      .button-bar
-        a.button(ng-click='number(7)') 7
-        a.button(ng-click='number(8)') 8
-        a.button(ng-click='number(9)') 9
-        a.button +
-      .button-bar
-        a.button(ng-click='number(4)') 4
-        a.button(ng-click='number(5)') 5
-        a.button(ng-click='number(6)') 6
-        a.button -
-      .button-bar
-        a.button(ng-click='number(1)') 1
-        a.button(ng-click='number(2)') 2
-        a.button(ng-click='number(6)') 3
-        a.button *
-      .button-bar
-        a.button(ng-click='number(0)') 0
-        a.button(ng-click='number(\'.\')') .
-        a.button =
-        a.button /
-      .button-bar
-        a.button(ng-click='clear()') Clear
-    .bar.bar-footer.bar-energized
-      .title
-        small &copy; 2014, bchiatt
+      .view-panel
+        .memory {{memory}} {{sym}}
+        .display {{display}}
+      .row
+        .col
+          a.button.button-energized(ng-click='number(7)') 7
+        .col
+          a.button.button-energized(ng-click='number(8)') 8
+        .col
+          a.button.button-energized(ng-click='number(9)') 9
+        .col
+          a.button.button-calm(ng-click='symbol(\'+\')') +
+      .row
+        .col
+          a.button.button-energized(ng-click='number(4)') 4
+        .col
+          a.button.button-energized(ng-click='number(5)') 5
+        .col
+          a.button.button-energized(ng-click='number(6)') 6
+        .col
+          a.button.button-calm(ng-click='symbol(\'-\')') -
+      .row
+        .col
+          a.button.button-energized(ng-click='number(1)') 1
+        .col
+          a.button.button-energized(ng-click='number(2)') 2
+        .col
+          a.button.button-energized(ng-click='number(3)') 3
+        .col
+          a.button.button-calm(ng-click='symbol(\'*\')') *
+      .row
+        .col
+          a.button.button-energized(ng-click='number(0)') 0
+        .col
+          a.button.button-energized(ng-click='number(\'.\')') .
+        .col
+          a.button.button-positive(ng-click='symbol(\'=\')') =
+        .col
+          a.button.button-calm(ng-click='symbol(\'/\')') /
+      .row
+        br
+        .button-bar
+          a.button.button-light(ng-click='clear()')
+            span(ng-show='secondClear') Clear Display
+            span(ng-hide='secondClear') Clear Memory

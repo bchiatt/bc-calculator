@@ -1,11 +1,40 @@
-.display{
-  font-size: 30px;
-  margin: 20px;
+ion-content{
+  padding: 10px;
+}
+
+.view-panel{
   text-align: right;
+  background-color: #ffdc90;
+  border: 2px solid #f0b840;
+  border-radius: 4px;
+  color: #4A87EE;
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  height: 80px;
+  padding-right: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.display{
+  line-height: 48px;
+  height: 60%;
+  font-size: 42px;
 }
 
 .memory{
-  font-size: 15px;
-  margin: 20px;
-  text-align: right;
+  line-height: 32px;
+  height: 40%;
+  font-size: 26px;
+}
+
+.col{
+  text-align: center;
+}
+
+.button-bar .button{
+  margin-top: 8px;
+  color: #4A87EE;
+  background-color: #ffdc90;
 }
