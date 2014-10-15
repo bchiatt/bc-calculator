@@ -29,12 +29,22 @@ ion-content{
   font-size: 26px;
 }
 
+.row .col .button{
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
 .col{
+  height: 75px;
   text-align: center;
 }
 
 .button-bar .button{
   margin-top: 8px;
+  font-size: 25px;
   color: #4A87EE;
   background-color: #ffdc90;
 }
