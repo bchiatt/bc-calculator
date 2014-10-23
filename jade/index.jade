@@ -12,7 +12,7 @@ html
     script(src='js/main_controller.js')
   body(ng-app='bc-calc', ng-controller='MainCtrl')
     .bar.bar-header.bar-energized
-      h1.title Calc
+      h1.title Calcu-Now
     ion-content.has-header
       .view-panel
         .memory {{memory}} {{sym}}
@@ -43,7 +43,7 @@ html
         .col
           a.button.button-energized(ng-click='number(3)') 3
         .col
-          a.button.button-calm(ng-click='symbol(\'*\')') *
+          a.button.button-calm(ng-click='symbol(\'*\')') &times;
       .row
         .col
           a.button.button-energized(ng-click='number(0)') 0
@@ -52,10 +52,11 @@ html
         .col
           a.button.button-positive(ng-click='symbol(\'=\')') =
         .col
-          a.button.button-calm(ng-click='symbol(\'/\')') /
+          a.button.button-calm(ng-click='symbol(\'/\')') &div;
       .row
         br
         .button-bar
           a.button.button-light(ng-click='clear()')
             span(ng-show='secondClear') Clear Display
             span(ng-hide='secondClear') Clear Memory
+    .bar.bar-footer.bar-energized

@@ -48,3 +48,7 @@ ion-content{
   color: #4A87EE;
   background-color: #ffdc90;
 }
+
+.bar-footer{
+  height: 2px;
+}

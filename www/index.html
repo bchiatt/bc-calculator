@@ -13,7 +13,7 @@
   </head>
   <body ng-app="bc-calc" ng-controller="MainCtrl">
     <div class="bar bar-header bar-energized">
-      <h1 class="title">Calc</h1>
+      <h1 class="title">Calcu-Now</h1>
     </div>
     <ion-content class="has-header">
       <div class="view-panel">
@@ -36,17 +36,18 @@
         <div class="col"><a ng-click="number(1)" class="button button-energized">1</a></div>
         <div class="col"><a ng-click="number(2)" class="button button-energized">2</a></div>
         <div class="col"><a ng-click="number(3)" class="button button-energized">3</a></div>
-        <div class="col"><a ng-click="symbol('*')" class="button button-calm">*</a></div>
+        <div class="col"><a ng-click="symbol('*')" class="button button-calm">&times;</a></div>
       </div>
       <div class="row">
         <div class="col"><a ng-click="number(0)" class="button button-energized">0</a></div>
         <div class="col"><a ng-click="number('.')" class="button button-energized">.</a></div>
         <div class="col"><a ng-click="symbol('=')" class="button button-positive">=</a></div>
-        <div class="col"><a ng-click="symbol('/')" class="button button-calm">/</a></div>
+        <div class="col"><a ng-click="symbol('/')" class="button button-calm">&div;</a></div>
       </div>
       <div class="row"><br>
         <div class="button-bar"><a ng-click="clear()" class="button button-light"><span ng-show="secondClear">Clear Display</span><span ng-hide="secondClear">Clear Memory</span></a></div>
       </div>
     </ion-content>
+    <div class="bar bar-footer bar-energized"></div>
   </body>
 </html>

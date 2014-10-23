@@ -6,6 +6,7 @@
     $scope.memory = '';
 
     $scope.clear = function(){
+      if($scope.display === '0' && $scope.memory === '0'){return;}
       $scope.secondClear = !!!$scope.secondClear;
 
       $scope.display = '0';
@@ -32,19 +33,15 @@
       switch(oldSym){
         case '+':
           result = (val1 * 1) + (val2 * 1);
-          console.log('add');
           break;
         case '-':
           result = (val1 * 1) - (val2 * 1);
-          console.log('dif');
           break;
         case '*':
           result = (val1 * 1) * (val2 * 1);
-          console.log('mul');
           break;
         case '/':
           result = (val1 * 1) / (val2 * 1);
-          console.log('div');
           break;
       }
 
